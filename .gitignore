@@ -358,3 +358,6 @@ Desktop.ini
 *.sln
 *.vcxproj
 *.vcxproj.filters
+
+[Tt]est/
+*.cbp
