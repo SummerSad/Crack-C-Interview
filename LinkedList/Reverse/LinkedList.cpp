@@ -7,7 +7,6 @@ SNode *getSNode(int key)
 	temp->next = NULL;
 	return temp;
 }
-
 void addSHead(SNode *&head, int key)
 {
 	SNode *p = getSNode(key);
