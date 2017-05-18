@@ -13,3 +13,4 @@ void printSNode(SNode *head);
 
 void delSHead(SNode *&head);
 void delSNode(SNode *&head, SNode *N);
+void delAll(SNode *&head);

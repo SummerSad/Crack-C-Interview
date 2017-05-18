@@ -9,5 +9,7 @@ int main()
 	addDHead(head, 7);
 	reverseDNode(head);
 	printDNode(head);
+	delDAll(head);
+
 	return 0;
 }

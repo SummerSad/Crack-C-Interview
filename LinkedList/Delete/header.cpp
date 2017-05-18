@@ -70,3 +70,8 @@ void delSNode(SNode *&head, SNode *X)
 	}
 
 }
+void delAll(SNode *&head)
+{
+	while (head != NULL)
+		delSHead(head);
+}

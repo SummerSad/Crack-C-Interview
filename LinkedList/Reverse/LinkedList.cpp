@@ -61,6 +61,11 @@ void reverseSNode(SNode *&head)
 	}
 	head = prev;
 }
+void delSAll(SNode *&head)
+{
+	while (head != NULL)
+		delSHead(head);
+}
 
 DNode *getDNode(int key)
 {
@@ -130,4 +135,9 @@ void reverseDNode(DNode *&head)
 		DCur = temp;
 	}
 	head = DPrev;
+}
+void delDAll(DNode *&head)
+{
+	while (head != NULL)
+		delDHead(head);
 }

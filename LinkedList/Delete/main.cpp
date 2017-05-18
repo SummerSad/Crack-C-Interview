@@ -3,11 +3,11 @@
 int main()
 {
 	SNode *head = NULL;
-
-	addSHead(head, 2);
 	addSHead(head, 3);
 	addSHead(head, 4);
-	delSNode(head, head->next);
+	addSHead(head, 5);
 	printSNode(head);
+	delAll(head);
+
 	return 0;
 }
