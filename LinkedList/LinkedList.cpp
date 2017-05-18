@@ -62,3 +62,73 @@ void reverseSNode(SNode *&head)
 	}
 	head = prev;
 }
+
+DNode *getDNode(int key)
+{
+	DNode *temp = new DNode;
+	temp->key = key;
+	temp->next = NULL;
+	temp->prev = NULL;
+	return temp;
+}
+void addDHead(DNode *&head, int key)
+{
+	DNode *p = getDNode(key);
+	if (p != NULL) //protect memory
+	{
+		if (head == NULL)
+			head = p;
+		else
+		{
+			head->prev = p;
+			p->next = head;
+			head = p;
+		}
+	}
+}
+void delDHead(DNode *&head)
+{
+	if (head != NULL)
+	{
+		if (head->next == NULL)
+		{
+			delete head;
+			head = NULL;
+		}
+		else
+		{
+			DNode *p = head;
+			head = head->next;
+			head->prev = NULL;
+			delete p;
+		}
+	}
+}
+void printDNode(DNode *head)
+{
+	if (head == NULL)
+		cout << "NULL" << endl;
+	else
+	{
+		cout << head->key << "->";
+		printDNode(head->next);
+	}
+}
+void reverseDNode(DNode *&head)
+{
+	DNode *DPrev = NULL;
+	DNode *DCur = head;
+	while (DCur != NULL)
+	{
+		DNode *temp = DCur->next;
+		//Dao chieu
+		DCur->next = DPrev;
+		DCur->prev = temp;
+		if (DPrev != NULL)
+			DPrev->prev = DCur;
+		//Next DNode
+		DPrev = DCur;
+		DCur = temp;
+	}
+	head = DPrev;
+}

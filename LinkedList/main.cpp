@@ -2,11 +2,12 @@
 
 int main()
 {
-	SNode *SHead = NULL;
-	addSHead(SHead, 3);
-	addSHead(SHead, 4);
-	addSHead(SHead, 5);
-	reverseSNode(SHead);
-	printSNode(SHead);
+	DNode *head = NULL;
+	addDHead(head, 3);
+	addDHead(head, 4);
+	addDHead(head, 5);
+	addDHead(head, 7);
+	reverseDNode(head);
+	printDNode(head);
 	return 0;
 }
