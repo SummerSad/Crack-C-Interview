@@ -174,7 +174,7 @@ void removeDup(Node *&head)
                 delete temp;
                 temp = NULL;
             }
-            else
+            else // trick
                 p2 = p2->next;
         }
         p1 = p1->next;
