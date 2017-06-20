@@ -163,6 +163,7 @@ void removeDup(Node *&head)
     Node *p1 = head;
     while(p1 != NULL && p1->next != NULL)
     {
+        // Lay p1 lam goc, chay p2 den khi = p1 thi xoa
         Node *p2 = p1;
         while(p2->next != NULL)
         {
